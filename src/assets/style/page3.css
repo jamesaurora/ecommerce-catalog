@@ -1,0 +1,39 @@
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .box {
+    width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sad-face {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .message p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .next-product {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #720060;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
