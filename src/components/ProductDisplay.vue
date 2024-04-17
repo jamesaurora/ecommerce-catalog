@@ -50,25 +50,25 @@ export default {
   name: 'ProductDisplay',
   data() {
     return {
-      product: {}, // Variabel untuk menyimpan data produk
-      currentIndex: 1, // Variabel untuk melacak indeks produk yang ditampilkan
-      loading: false // Variabel untuk menandai apakah data sedang dimuat atau tidak
+      product: {}, // variabel buat nyimpen data produk
+      currentIndex: 1, // Variabel buat melacak indeks produk yang ditampilkan
+      loading: false // Variabel buat nandain apakah data sedang dimuat atau tidak
     };
   },
   created() {
-    this.fetchProduct(); // Memanggil method fetchProduct saat komponen dibuat
+    this.fetchProduct(); // manggil method fetchProduct saat komponen dibuat
   },
   methods: {
     async fetchProduct() {
       try {
-        this.loading = true; // Tandai bahwa data sedang dimuat
+        this.loading = true; // tanda kalau data lagi dimuat
         const response = await fetch(`https://fakestoreapi.com/products/${this.currentIndex}`);
         const data = await response.json();
-        this.product = data; // Simpan data produk yang diterima ke dalam variabel product
+        this.product = data; // Simpen data produk yang diterima ke dalam variabel product
       } catch (error) {
         console.error('Error fetching product:', error);
       } finally {
-        this.loading = false; // Hentikan penandaan bahwa data sedang dimuat
+        this.loading = false; // buat ngehentiin penandaan bahwa data sedang dimuat
       }
     },
     nextProduct() {
@@ -86,12 +86,12 @@ export default {
 @import url('/src/assets/style/page.css');
 
 .loader {
-  border: 8px solid #f3f3f3; /* Warna latar belakang loader */
+  border: 8px solid #f3f3f3; /* Warna si latar belakang loader */
   border-top: 8px solid #3498db; /* Warna garis atas loader */
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: spin 1s linear infinite; /* Animasi putaran loader */
+  animation: spin 1s linear infinite; /* Animasi si putaran loader */
   position: absolute;
   top: 50%;
   left: 50%;
